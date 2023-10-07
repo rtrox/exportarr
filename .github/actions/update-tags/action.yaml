@@ -32,7 +32,7 @@ runs:
       run: |
         echo "Changed Files:"
         git diff --name-only
-        if [ $(git diff --name-only | grep -vE 'examples/.*\.yaml$|.md$' | wc -l) = "0" ]
+        if [ $(git diff --name-only | grep -vE 'examples/.*\.yaml$|.md$' | wc -l) != "0" ]
           then echo "Changing files other than example yaml files or markdown files is not allowed!"
           exit 1
         fi
