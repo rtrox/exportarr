@@ -24,7 +24,7 @@ runs:
     - name: Update Files
       shell: bash
       run: |
-        python3 ./.github/scripts/update_tags.py ${GIHUB_REF_NAME}
+        python3 ./.github/scripts/update_tags.py ${GITHUB_REF_NAME}
         git diff
 
     - name: Ensure only text files changed
